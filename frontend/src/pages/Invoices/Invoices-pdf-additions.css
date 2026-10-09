@@ -1,0 +1,29 @@
+/* File: src/pages/Invoices/Invoices-pdf-additions.css */
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.invoice-pdf-spinning {
+    animation: spin 1s linear infinite;
+}
+
+.invoice-actions button:disabled,
+.invoices-secondary-btn:disabled,
+.invoices-primary-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.invoices-secondary-btn,
+.invoices-primary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}

@@ -1,0 +1,526 @@
+.accounting-page {
+    padding: 28px;
+    color: var(--text);
+}
+
+.accounting-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.accounting-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: var(--shadow);
+}
+
+.accounting-card span {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+.accounting-card strong {
+    display: block;
+    margin-top: 4px;
+    font-size: 21px;
+}
+
+.accounting-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+}
+
+.accounting-icon.green {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.accounting-icon.red {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.accounting-icon.blue {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.accounting-icon.orange {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.ledger-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.ledger-header {
+    padding: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+.ledger-header h2 {
+    margin: 0 0 4px;
+}
+
+.ledger-header p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+
+.ledger-filters {
+    display: flex;
+    gap: 10px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--background);
+    border: 1px solid var(--border);
+    padding: 0 10px;
+    border-radius: 8px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text);
+    padding: 10px 0;
+    width: 220px;
+}
+
+.ledger-filters select,
+.form-group input,
+.form-group select {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    white-space: nowrap;
+}
+
+th {
+    color: var(--text-secondary);
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+td {
+    font-size: 14px;
+}
+
+.entry-type {
+    padding: 6px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.entry-type.income {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.entry-type.expense {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.icon-btn {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    border-radius: 7px;
+    padding: 7px;
+}
+
+.primary-btn,
+.secondary-btn {
+    border: none;
+    border-radius: 9px;
+    padding: 11px 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+}
+
+.primary-btn {
+    background: var(--primary);
+    color: white;
+}
+
+.secondary-btn {
+    background: var(--surface-hover);
+    color: var(--text);
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.modal-box {
+    width: min(700px, 100%);
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.modal-box.small {
+    width: min(500px, 100%);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.modal-header h2 {
+    margin: 0 0 5px;
+}
+
+.modal-header p {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+.modal-header button {
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    outline: none;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.entry-details {
+    display: grid;
+    gap: 17px;
+}
+
+.entry-details span {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 900px) {
+    .accounting-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ledger-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .ledger-filters {
+        width: 100%;
+    }
+
+    .search-box {
+        flex: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .accounting-page {
+        padding: 16px;
+    }
+
+    .accounting-stats,
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+    .ledger-filters {
+        flex-direction: column;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+    /* =========================================================
+   ACCOUNTING ALERTS
+========================================================= */
+
+    .accounting-alert {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 16px;
+        border-radius: 10px;
+        margin-bottom: 18px;
+        font-size: 14px;
+    }
+
+    .accounting-alert span {
+        flex: 1;
+    }
+
+    .accounting-alert button {
+        border: none;
+        background: transparent;
+        color: inherit;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .accounting-alert-success {
+        background: #f0fff4;
+        border: 1px solid #b7e4c7;
+        color: #18794e;
+    }
+
+    .accounting-alert-error {
+        background: #fff5f5;
+        border: 1px solid #f1b5b5;
+        color: #b42318;
+    }
+
+    /* =========================================================
+       REFERENCE
+    ========================================================= */
+
+    .reference-cell {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .reference-cell small {
+        color: var(--text-secondary);
+        font-size: 11px;
+    }
+
+    /* =========================================================
+       DESCRIPTION
+    ========================================================= */
+
+    .accounting-description {
+        display: inline-block;
+        max-width: 280px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* =========================================================
+       PAYMENT METHOD
+    ========================================================= */
+
+    .payment-method {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    /* =========================================================
+       DEBIT / CREDIT
+    ========================================================= */
+
+    .debit-amount {
+        color: #b91c1c;
+    }
+
+    .credit-amount {
+        color: #15803d;
+    }
+
+    /* =========================================================
+       SEARCH CLEAR
+    ========================================================= */
+
+    .accounting-search-clear {
+        border: none;
+        background: transparent;
+        color: var(--text-secondary);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2px;
+    }
+
+    /* =========================================================
+       LOADING
+    ========================================================= */
+
+    .accounting-loading {
+        height: 180px;
+        text-align: center;
+        color: var(--text-secondary);
+    }
+
+    .accounting-loading svg {
+        vertical-align: middle;
+        margin-right: 8px;
+    }
+
+    /* =========================================================
+       EMPTY STATE
+    ========================================================= */
+
+    .accounting-empty-state {
+        height: 240px;
+        text-align: center;
+        color: var(--text-secondary);
+    }
+
+    .accounting-empty-state svg {
+        margin-bottom: 10px;
+    }
+
+    .accounting-empty-state h3 {
+        margin: 5px 0;
+        color: var(--text);
+    }
+
+    .accounting-empty-state p {
+        margin: 0 0 15px;
+    }
+
+    /* =========================================================
+       JOURNAL INFO
+    ========================================================= */
+
+    .journal-info {
+        margin-top: 16px;
+        padding: 13px 16px;
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: var(--surface);
+        color: var(--text-secondary);
+        font-size: 13px;
+    }
+
+    /* =========================================================
+       SPINNER
+    ========================================================= */
+
+    .accounting-spin {
+        animation: accounting-spin-animation 1s linear infinite;
+    }
+
+    @keyframes accounting-spin-animation {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    /* =========================================================
+       BUTTON DISABLED
+    ========================================================= */
+
+    .secondary-btn:disabled {
+        opacity: 0.55;
+        cursor: not-allowed;
+    }
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 900px) {
+        .accounting-description {
+            max-width: 200px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .accounting-description {
+            max-width: 160px;
+        }
+
+        .journal-info {
+            align-items: flex-start;
+        }
+    }
+}

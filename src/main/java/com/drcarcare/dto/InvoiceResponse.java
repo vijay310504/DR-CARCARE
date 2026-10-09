@@ -1,0 +1,46 @@
+package com.drcarcare.dto;
+
+import lombok.*;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.List;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class InvoiceResponse {
+
+    private Long id;
+
+    private String invoiceNumber;
+
+    private Long jobCardId;
+
+    private LocalDate invoiceDate;
+
+    private String status;
+
+    private BigDecimal subtotal;
+
+    private BigDecimal discountAmount;
+
+    private BigDecimal taxAmount;
+
+    private BigDecimal totalAmount;
+
+    private BigDecimal paidAmount;
+
+    private BigDecimal outstandingAmount;
+
+    private String notes;
+
+    private List<InvoiceItemResponse> items;
+
+    private LocalDateTime createdAt;
+
+    private LocalDateTime updatedAt;
+}
